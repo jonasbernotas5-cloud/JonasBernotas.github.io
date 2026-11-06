@@ -26,7 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <link href="assets/css/custom.css" rel="stylesheet">
   <!-- =======================================================
   * Template Name: FolioOne
   * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
@@ -144,13 +144,33 @@
         </div>
 
         <section class="services-video-section" data-aos="fade-up" data-aos-delay="250">
-          <h3>Vaizdo įrašas</h3>
-          <div class="services-video-wrap">
-            <video controls preload="metadata" playsinline>
-              <source src="assets/media/video1.mp4" type="video/mp4">
-              Jūsų naršyklė nepalaiko vaizdo įrašų atkūrimo.
-            </video>
+          <h3>Vaizdo įrašai</h3>
+          <div class="services-video-grid">
+            <div class="services-video-wrap">
+              <video controls preload="metadata" playsinline>
+                <source src="assets/media/video1.mp4" type="video/mp4">
+                Jūsų naršyklė nepalaiko vaizdo įrašų atkūrimo.
+              </video>
+            </div>
+            <div class="services-video-wrap">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/BoUVIhtqjAw"
+                title="YouTube vaizdo įrašas"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
+        </section>
+
+        <section class="services-audio-section" data-aos="fade-up" data-aos-delay="300">
+          <h3>Garso įrašas</h3>
+          <audio class="services-audio-player" controls preload="metadata">
+            <source src="assets/media/audio.mp3" type="audio/mpeg">
+            Jūsų naršyklė nepalaiko garso įrašų atkūrimo.
+          </audio>
         </section>
 
       </div>

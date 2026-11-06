@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+:root {
+    --bg-main: #064e3b;          
+    --bg-header: #022c22;        
+    --bg-card-head: #065f46;     
+    
+    --text-main: #e2e8f0;        
+    --text-muted: #cbd5e1;       
+    --text-heading: #f0fdf4;     
+    
+    --accent-emerald: #34d399;   
+    --accent-hover: #10b981;     
+    --btn-bg: #059669;           
+    
+    --border-color: #064e3b;     
+    --border-dark: #1e293b;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-heading) !important;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+h1 span, h1 .highlight, h1 strong {
+    color: var(--accent-emerald) !important;
+}
+
+h2 { font-size: 2rem; color: var(--accent-emerald); }
+h3 { font-size: 1.65rem; color: #6ee7b7; }
+h4 { font-size: 1.35rem; font-weight: 600; color: #a7f3d0; }
+h5 { font-size: 1.15rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6ee7b7; }
+h6 { font-size: 1rem; font-weight: 500; color: #a7f3d0; }
+
+body.services-page .section-title h2 {
+    font-size: 2rem;
+    color: var(--accent-emerald);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+body.services-page .services h3 {
+    font-size: 1.65rem;
+    color: #6ee7b7;
+    letter-spacing: -0.02em;
+}
+
+/* --- 4. PASTRAIPOS --- */
+p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    max-width: 75ch;
+}
+
+p::first-letter {
+    font-weight: 500;
+}
+
+/* --- 5. NAVIGACIJOS JUOSTA --- */
+header, navbar, .navbar, nav {
+    background-color: var(--bg-header) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header a, .navbar a, nav a, header .nav-link, .navbar-nav .nav-link {
+    color: #ecfdf5 !important;
+}
+
+header a:hover, .navbar a:hover, nav a:hover {
+    color: var(--accent-emerald) !important;
+}
+
+/* --- 6. MYGTUKAI --- */
+.btn-primary, 
+a.btn-primary, 
+button.btn-primary {
+    background-color: var(--btn-bg) !important;
+    border-color: var(--btn-bg) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover, 
+a.btn-primary:hover, 
+button.btn-primary:hover {
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}
+
+a.btn:nth-child(2),
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-secondary {
+    border-color: var(--btn-bg) !important;
+    color: var(--accent-emerald) !important;
+    background-color: transparent !important;
+}
+
+a.btn:nth-child(2):hover,
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover,
+.btn-secondary:hover {
+    background-color: var(--btn-bg) !important;
+    color: #ffffff !important;
+}
+
+/* --- 7. PIKTOGRAMOS IR AKCENTAI --- */
+.text-primary, 
+span.typed-text, 
+.typed-cursor,
+.typed-text,
+.typed,
+.typewrite,
+span[class*="typed"],
+h2 span,
+h3 span {
+    color: var(--accent-emerald) !important;
+}
+
+.typed-cursor,
+.typed-cursor--blink {
+    color: var(--accent-emerald) !important;
+    opacity: 1;
+}
+
+.badge-icon, 
+.card-icon, 
+.feature-box i, 
+.icon-box i,
+div[class*="icon"] i,
+div[class*="box"] svg,
+div[class*="box"] i,
+div[class*="badge"] svg,
+div[class*="badge"] i,
+div[class*="card"] svg,
+div[class*="card"] i,
+.hero svg,
+.hero i,
+svg path {
+    fill: var(--accent-emerald) !important;
+    color: var(--accent-emerald) !important;
+    stroke: var(--accent-emerald) !important;
+}
+
+.social-links a:hover, 
+.social-icons a:hover,
+i:hover {
+    color: var(--accent-emerald) !important;
+}
+
+/* --- 8. PASLAUGŲ LENTELĖ --- */
+.table thead th,
+table thead,
+table th,
+.table-primary,
+th[scope="col"] {
+    background-color: var(--bg-card-head) !important;
+    color: var(--text-heading) !important;
+    border-color: #047857 !important;
+}
+
+.table td, 
+table td,
+.table th,
+table th {
+    background-color: transparent !important;
+    border-color: var(--border-dark) !important;
+}
+
+.table td:first-child,
+table td:first-child,
+.table td strong {
+    color: var(--text-heading) !important;
+    font-weight: 600;
+}
+
+.table td:nth-child(2),
+table td:nth-child(2) {
+    color: var(--text-muted) !important;
+}
+
+.table td:last-child,
+table td:last-child,
+.text-info,
+td[class*="price"] {
+    color: var(--accent-emerald) !important;
+    font-weight: 600;
+}
+
+ul li::marker,
+.services-list li::before {
+    color: var(--accent-emerald) !important;
+}
+
+section,
+#about,
+#experience,
+#portfolio,
+#projects,
+.about-section,
+.experience-section,
+.projects-section {
+    padding: 80px 20px !important;  /* Didesnis padidinimas viršuje ir apačioje */
+    margin-bottom: 40px !important; /* Tarpas tarp pačių sekcijų */
+}
+
+/* Antraščių tarpai sekcijų viduje */
+.section-title,
+section h2,
+#about h2,
+#experience h2,
+#projects h2 {
+    margin-bottom: 2.5rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.card,
+.portfolio-item,
+.experience-box,
+.about-content,
+.service-item,
+.timeline-item,
+div[class*="card"],
+div[class*="box"] {
+    
+    border: 1px solid rgba(52, 211, 153, 0.2) !important; 
+    border-radius: 16px !important;                       
+    
+    padding: 28px !important;
+    margin-bottom: 24px !important;
+    
+    background-color: rgba(2, 44, 34, 0.6) !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(52, 211, 153, 0.05) !important;
+    
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.card:hover,
+.portfolio-item:hover,
+.experience-box:hover,
+.service-item:hover,
+div[class*="card"]:hover {
+    transform: translateY(-6px) !important;
+    border-color: var(--accent-emerald) !important;
+    box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.7), 
+                0 0 20px rgba(52, 211, 153, 0.2) !important;
+}
+
+header, navbar, .navbar, nav {
+    position: static !important;
+    background-color: transparent !important;
+    border-bottom: none !important;
+    padding: 20px 0 !important;
+    width: 100% !important;
+}
+
+header .container, 
+.navbar .container, 
+nav .container,
+.nav-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-header) !important;
+    border: 1px solid var(--accent-emerald) !important; 
+    border-radius: 50px !important;                       
+    padding: 10px 25px !important;                      
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 
+                0 0 12px rgba(52, 211, 153, 0.15) !important; 
+    margin: 0 auto !important;
+    max-width: 90% !important;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+header .container:hover, 
+.navbar .container:hover, 
+nav .container:hover,
+.nav-container:hover {
+    border-color: #6ee7b7 !important; 
+    box-shadow: 0 0 25px rgba(52, 211, 153, 0.5), 
+                inset 0 0 15px rgba(52, 211, 153, 0.2) !important; 
+}
+
+header .container::before, 
+.navbar .container::before, 
+nav .container::before,
+.nav-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(52, 211, 153, 0.3),
+        transparent
+    );
+    transition: left 0.7s ease;
+    pointer-events: none;
+}
+
+header .container:hover::before, 
+.navbar .container:hover::before, 
+nav .container:hover::before,
+.nav-container:hover::before {
+    left: 100%;
+}
+.skill-item,
+.skills-box,
+.skill-card,
+.progress-container,
+div[class*="skill"] {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-header) !important;
+    border: 1px solid rgba(52, 211, 153, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    transition: all 0.4s ease !important;
+}
+
+.skill-item:hover,
+.skills-box:hover,
+.skill-card:hover,
+.progress-container:hover,
+div[class*="skill"]:hover {
+    border-color: var(--accent-emerald) !important; 
+    box-shadow: 0 0 25px rgba(52, 211, 153, 0.4), 
+                inset 0 0 15px rgba(52, 211, 153, 0.1) !important; 
+    transform: translateY(-4px) !important;
+}
+
+.skill-item::before,
+.skills-box::before,
+.skill-card::before,
+div[class*="skill"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(52, 211, 153, 0.2),
+        transparent
+    );
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.skill-item:hover::before,
+.skills-box:hover::before,
+.skill-card:hover::before,
+div[class*="skill"]:hover::before {
+    left: 100%;
+}
