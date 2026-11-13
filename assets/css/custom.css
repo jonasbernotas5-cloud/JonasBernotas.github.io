@@ -121,7 +121,6 @@ a.btn:nth-child(2):hover,
     color: #ffffff !important;
 }
 
-/* --- 7. PIKTOGRAMOS IR AKCENTAI --- */
 .text-primary, 
 span.typed-text, 
 .typed-cursor,
@@ -165,43 +164,69 @@ i:hover {
     color: var(--accent-emerald) !important;
 }
 
-/* --- 8. PASLAUGŲ LENTELĖ --- */
 .table thead th,
-table thead,
-table th,
-.table-primary,
-th[scope="col"] {
+table thead th {
     background-color: var(--bg-card-head) !important;
     color: var(--text-heading) !important;
-    border-color: #047857 !important;
+    border-bottom: 2px solid var(--accent-emerald) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
-.table td, 
-table td,
+.table tbody tr:nth-child(odd) td,
+.table tbody tr:nth-child(odd) th,
+table tbody tr:nth-child(odd) td,
+table tbody tr:nth-child(odd) th {
+    background-color: #022c22 !important;
+}
+
+.table tbody tr:nth-child(even) td,
+.table tbody tr:nth-child(even) th,
+table tbody tr:nth-child(even) td,
+table tbody tr:nth-child(even) th {
+    background-color: #064e3b !important;
+}
+
+.table tbody tr:hover td,
+.table tbody tr:hover th,
+table tbody tr:hover td,
+table tbody tr:hover th {
+    background-color: #065f46 !important;
+    transition: background-color 0.25s ease;
+}
+
 .table th,
-table th {
-    background-color: transparent !important;
+.table td,
+table th,
+table td {
+    padding: 18px 24px !important;
+    text-align: center !important;
+    vertical-align: middle !important;
     border-color: var(--border-dark) !important;
 }
 
-.table td:first-child,
-table td:first-child,
-.table td strong {
+.table tbody th,
+table tbody th,
+.table tbody td:first-child,
+table tbody td:first-child {
     color: var(--text-heading) !important;
-    font-weight: 600;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    font-size: 1rem !important;
 }
 
-.table td:nth-child(2),
-table td:nth-child(2) {
+.table tbody td:nth-child(2),
+table tbody td:nth-child(2) {
     color: var(--text-muted) !important;
 }
 
-.table td:last-child,
-table td:last-child,
-.text-info,
-td[class*="price"] {
+.table tbody td:last-child,
+table tbody td:last-child {
     color: var(--accent-emerald) !important;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 ul li::marker,
@@ -214,14 +239,14 @@ section,
 #experience,
 #portfolio,
 #projects,
+#kompetencijos,
 .about-section,
 .experience-section,
 .projects-section {
-    padding: 80px 20px !important;  /* Didesnis padidinimas viršuje ir apačioje */
-    margin-bottom: 40px !important; /* Tarpas tarp pačių sekcijų */
+    padding: 80px 20px !important;
+    margin-bottom: 40px !important;
 }
 
-/* Antraščių tarpai sekcijų viduje */
 .section-title,
 section h2,
 #about h2,
@@ -375,4 +400,511 @@ div[class*="skill"]::before {
 .skill-card:hover::before,
 div[class*="skill"]:hover::before {
     left: 100%;
+}
+
+main ul,
+section ul,
+.services ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+main ul > li,
+section ul > li,
+.services ul > li {
+    position: relative;
+    padding-left: 28px !important;
+    margin-bottom: 12px !important;
+    color: var(--text-main) !important;
+}
+
+main ul > li::before,
+section ul > li::before,
+.services ul > li::before {
+    content: "▹" !important;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: var(--accent-emerald) !important;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+main ol,
+section ol,
+.services ol {
+    list-style: none !important;
+    counter-reset: custom-step-counter;
+    padding-left: 0 !important;
+}
+
+main ol > li,
+section ol > li,
+.services ol > li {
+    counter-increment: custom-step-counter;
+    position: relative;
+    padding-left: 42px !important;
+    margin-bottom: 16px !important;
+    color: var(--text-main) !important;
+}
+
+main ol > li::before,
+section ol > li::before,
+.services ol > li::before {
+    content: counter(custom-step-counter) !important;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 26px;
+    height: 26px;
+    background-color: var(--btn-bg) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--accent-emerald) !important;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(52, 211, 153, 0.25);
+}
+
+main ol ul,
+section ol ul,
+.services ol ul {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding-left: 16px !important;
+    border-left: 2px solid rgba(52, 211, 153, 0.35) !important;
+}
+
+main ol ul > li,
+section ol ul > li,
+.services ol ul > li {
+    padding-left: 22px !important;
+    margin-bottom: 8px !important;
+    font-size: 0.95rem !important; 
+    color: var(--text-muted) !important;
+}
+
+main ol ul > li::before,
+section ol ul > li::before,
+.services ol ul > li::before {
+    content: "— " !important; 
+    font-size: 1rem;
+    color: #6ee7b7 !important;
+    top: 0;
+}
+
+.competence-section div,
+.competence-section div:hover,
+.competence-section div::before,
+.competence-section div::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  translate: none !important;
+  top: auto !important;
+  bottom: auto !important;
+}
+
+.competence-section .stats-grid,
+.competence-section .stats-grid:hover,
+.competence-section .stat-details,
+.competence-section .stat-details:hover,
+.competence-section .level-progress-wrapper,
+.competence-section .level-progress-wrapper:hover,
+.competence-section .level-progress-label,
+.competence-section .level-progress-label:hover {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #e2e8f0 !important;
+  margin: 0 0 8px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .stats-summary-row,
+.competence-section .stats-summary-row:hover,
+.competence-section .summary-item,
+.competence-section .summary-item:hover,
+.competence-section .kanban-cards,
+.competence-section .kanban-cards:hover,
+.competence-section .skill-info,
+.competence-section .skill-info:hover,
+.competence-section .skill-meta,
+.competence-section .skill-meta:hover {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* =========================================================
+   3 IR 4 UŽDUOTYS: STATISTIKOS SKYDELIS IR PROGRESO JUOSTA
+   ========================================================= */
+
+.competence-section .stats-panel,
+.competence-section .stats-panel:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  margin-bottom: 28px !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .stats-grid,
+.competence-section .stats-grid:hover {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  margin-bottom: 22px !important;
+}
+
+.competence-section .stat-card,
+.competence-section .stat-card:hover {
+  border-radius: 14px !important;
+  padding: 16px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .stat-xp,
+.competence-section .stat-xp:hover {
+  background-color: rgba(56, 189, 248, 0.1) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+
+.competence-section .stat-level,
+.competence-section .stat-level:hover {
+  background-color: rgba(168, 85, 247, 0.12) !important;
+  border: 1px solid rgba(168, 85, 247, 0.28) !important;
+}
+
+.competence-section .stat-rank,
+.competence-section .stat-rank:hover {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.competence-section .stat-icon,
+.competence-section .stat-icon:hover {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 22px !important;
+  flex-shrink: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .stat-xp .stat-icon { color: #38bdf8 !important; }
+.competence-section .stat-level .stat-icon { color: #c084fc !important; }
+.competence-section .stat-rank .stat-icon { color: #34d399 !important; }
+
+.competence-section .stat-details {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.competence-section .stat-label {
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  font-weight: 500 !important;
+}
+
+.competence-section .stat-value {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #f8fafc !important;
+  line-height: 1.2 !important;
+}
+
+/* Progreso juosta */
+.competence-section .level-progress-wrapper,
+.competence-section .level-progress-wrapper:hover {
+  margin-bottom: 20px !important;
+}
+
+.competence-section .level-progress-label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #e2e8f0 !important;
+  margin-bottom: 8px !important;
+}
+
+.competence-section .level-progress-track,
+.competence-section .level-progress-track:hover {
+  width: 100% !important;
+  height: 22px !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 999px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .level-progress-fill,
+.competence-section .level-progress-fill:hover {
+  height: 100% !important;
+  background: linear-gradient(90deg, #0ea5e9 0%, #10b981 100%) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 0 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Apatinė suvestinės eilutė */
+.competence-section .stats-summary-row,
+.competence-section .stats-summary-row:hover {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.competence-section .summary-item,
+.competence-section .summary-item:hover {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  color: #cbd5e1 !important;
+}
+
+.competence-section .summary-item strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.competence-section .text-purple { color: #c084fc !important; }
+.competence-section .text-emerald { color: #34d399 !important; }
+.competence-section .text-blue { color: #38bdf8 !important; }
+
+/* =========================================================
+   2 UŽDUOTIS: SKILL KANBAN LENTA (3 STULPELIAI)
+   ========================================================= */
+
+.competence-section .kanban-board,
+.competence-section .kanban-board:hover {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  margin-top: 20px !important;
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.competence-section .kanban-column,
+.competence-section .kanban-column:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  padding: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .kanban-column-header,
+.competence-section .kanban-column-header:hover {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .kanban-column-header h3 {
+  margin: 0 !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: inherit !important;
+}
+
+.competence-section .kanban-column-header i {
+  font-size: 18px !important;
+}
+
+.competence-section .status-planned .kanban-column-header,
+.competence-section .status-planned .kanban-column-header:hover {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #fbbf24 !important;
+}
+
+.competence-section .status-learning .kanban-column-header,
+.competence-section .status-learning .kanban-column-header:hover {
+  background-color: rgba(56, 189, 248, 0.15) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  color: #38bdf8 !important;
+}
+
+.competence-section .status-done .kanban-column-header,
+.competence-section .status-done .kanban-column-header:hover {
+  background-color: rgba(16, 185, 129, 0.18) !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  color: #34d399 !important;
+}
+
+.competence-section .kanban-cards,
+.competence-section .kanban-cards:hover {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.competence-section .skill-card {
+  background-color: #162227 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .skill-card:hover {
+  background-color: #162227 !important;
+  padding: 14px 16px !important;
+  border-color: rgba(52, 211, 153, 0.55) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .skill-icon,
+.competence-section .skill-icon:hover {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  flex-shrink: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.competence-section .status-planned .skill-icon { color: #fbbf24 !important; }
+.competence-section .status-learning .skill-icon { color: #38bdf8 !important; }
+.competence-section .status-done .skill-icon { color: #34d399 !important; }
+
+.competence-section .skill-info {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.competence-section .skill-info h4 {
+  margin: 0 0 8px 0 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #f1f5f9 !important;
+}
+
+.competence-section .skill-meta,
+.competence-section .skill-meta:hover {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  margin-top: 6px !important;
+  font-size: 11px !important;
+}
+
+.competence-section .badge-status {
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+.competence-section .status-planned .badge-status {
+  background-color: rgba(245, 158, 11, 0.14) !important;
+  color: #fcd34d !important;
+}
+
+.competence-section .status-learning .badge-status {
+  background-color: rgba(56, 189, 248, 0.14) !important;
+  color: #7dd3fc !important;
+}
+
+.competence-section .status-done .badge-status {
+  background-color: rgba(16, 185, 129, 0.16) !important;
+  color: #6ee7b7 !important;
+}
+
+.competence-section .badge-xp {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  color: #cbd5e1 !important;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  white-space: nowrap !important;
+}
+
+/* Prisitaikymas prie mažesnių ekranų */
+@media (max-width: 992px) {
+  .competence-section .kanban-board,
+  .competence-section .kanban-board:hover {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .competence-section .stats-grid,
+  .competence-section .stats-grid:hover {
+    grid-template-columns: 1fr !important;
+  }
+  .competence-section .stats-summary-row,
+  .competence-section .stats-summary-row:hover {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
 }
