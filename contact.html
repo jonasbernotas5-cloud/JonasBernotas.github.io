@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - FolioOne Bootstrap Template</title>
+  <title>Kontaktai - Mano CV</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -28,11 +28,11 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
   <!-- =======================================================
-  * Template Name: FolioOne
-  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-  * Updated: Aug 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
+- Template Name: FolioOne
+- Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
+- Updated: Aug 23 2025 with Bootstrap v5.3.7
+- Author: BootstrapMade.com
+- License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
 
@@ -76,7 +76,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2>Kontaktai</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -84,17 +84,16 @@
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-              <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Kontakto informacija</h3>
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <h4>Adresas</h4>
+                  <p>Saulėtekio al. 18</p>
+                  <p>Vilnius, LT 08300</p>
                 </div>
               </div>
 
@@ -103,9 +102,8 @@
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <h4>Telefono numeris</h4>
+                  <p>+370 608 78405</p>
                 </div>
               </div>
 
@@ -114,9 +112,8 @@
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                  <h4>El. paštas</h4>
+                  <p>jonas.bernotas5@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -124,38 +121,69 @@
 
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Susisiekite ir Įvertinkite</h3>
+              <p>Užpildykite formą ir įvertinkite mano darbus</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form id="contactForm" class="contact-eval-form" data-aos="fade-up" data-aos-delay="200">
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Vardas" required="">
                   </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <div class="col-md-6">
+                    <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Pavardė" required="">
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="El. paštas" required="">
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="tel" name="phone" id="phone" class="form-control" value="+370 " maxlength="13" pattern="\+370\s[0-9]{8}" required>
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <input type="text" name="address" id="address" class="form-control" placeholder="Adresas" required="">
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <div class="rating-group">
+                      <label for="rating1" class="form-label d-flex justify-content-between">
+                        <span>1. Kaip vertinate svetainės dizainą ir patogumą?</span>
+                        <strong id="rating1Val" class="rating-badge">8</strong>
+                      </label>
+                      <input type="range" class="form-range custom-slider" id="rating1" name="rating1" min="1" max="10" value="8" oninput="document.getElementById('rating1Val').textContent = this.value" required="">
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="rating-group">
+                      <label for="rating2" class="form-label d-flex justify-content-between">
+                        <span>2. Kaip vertinate pateiktus elektronikos ir programavimo projektus?</span>
+                        <strong id="rating2Val" class="rating-badge">9</strong>
+                      </label>
+                      <input type="range" class="form-range custom-slider" id="rating2" name="rating2" min="1" max="10" value="9" oninput="document.getElementById('rating2Val').textContent = this.value" required="">
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="rating-group">
+                      <label for="rating3" class="form-label d-flex justify-content-between">
+                        <span>3. Kokia tikimybė, kad rekomenduotumėte mane kaip specialistą?</span>
+                        <strong id="rating3Val" class="rating-badge">10</strong>
+                      </label>
+                      <input type="range" class="form-range custom-slider" id="rating3" name="rating3" min="1" max="10" value="10" oninput="document.getElementById('rating3Val').textContent = this.value" required="">
+                    </div>
                   </div>
 
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn">Siųsti</button>
                   </div>
 
                 </div>
               </form>
+              <div id="formResults" class="form-results-box mt-4" style="display: none;"></div>
 
             </div>
           </div>
@@ -211,6 +239,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

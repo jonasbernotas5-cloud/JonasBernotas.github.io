@@ -546,10 +546,6 @@ section ol ul > li::before,
   transform: none !important;
 }
 
-/* =========================================================
-   3 IR 4 UŽDUOTYS: STATISTIKOS SKYDELIS IR PROGRESO JUOSTA
-   ========================================================= */
-
 .competence-section .stats-panel,
 .competence-section .stats-panel:hover {
   background-color: rgba(255, 255, 255, 0.03) !important;
@@ -638,7 +634,6 @@ section ol ul > li::before,
   line-height: 1.2 !important;
 }
 
-/* Progreso juosta */
 .competence-section .level-progress-wrapper,
 .competence-section .level-progress-wrapper:hover {
   margin-bottom: 20px !important;
@@ -682,7 +677,6 @@ section ol ul > li::before,
   box-shadow: none !important;
 }
 
-/* Apatinė suvestinės eilutė */
 .competence-section .stats-summary-row,
 .competence-section .stats-summary-row:hover {
   display: flex !important;
@@ -709,10 +703,6 @@ section ol ul > li::before,
 .competence-section .text-purple { color: #c084fc !important; }
 .competence-section .text-emerald { color: #34d399 !important; }
 .competence-section .text-blue { color: #38bdf8 !important; }
-
-/* =========================================================
-   2 UŽDUOTIS: SKILL KANBAN LENTA (3 STULPELIAI)
-   ========================================================= */
 
 .competence-section .kanban-board,
 .competence-section .kanban-board:hover {
@@ -888,7 +878,6 @@ section ol ul > li::before,
   white-space: nowrap !important;
 }
 
-/* Prisitaikymas prie mažesnių ekranų */
 @media (max-width: 992px) {
   .competence-section .kanban-board,
   .competence-section .kanban-board:hover {
@@ -907,4 +896,176 @@ section ol ul > li::before,
     gap: 10px !important;
     align-items: flex-start !important;
   }
+}
+
+#services,
+#services.services.section {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0.06)) !important;
+  animation: multiColorBg 9s ease-in-out infinite !important;
+}
+
+@keyframes multiColorBg {
+  0% {
+    background-color: #080d10; 
+  }
+  33% {
+    background-color: #13314d; 
+  }
+  66% {
+    background-color: #261a47; 
+  }
+  100% {
+    background-color: #080d10;
+  }
+}
+
+#about.about.section {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#about .container {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.about-shapes-container, .about-shapes-container:hover,
+.css-shape, .css-shape:hover {
+  position: absolute !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+}
+
+.about-shapes-container, .about-shapes-container:hover {
+  inset: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+  z-index: 0 !important;
+}
+
+
+.shape-circle, .shape-circle:hover {
+  top: 15% !important;
+  left: 6% !important;
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.25), rgba(16, 185, 129, 0.05)) !important;
+  border: 2px solid rgba(52, 211, 153, 0.4) !important;
+  animation: floatPulse 6s ease-in-out infinite !important;
+}
+
+.shape-triangle, .shape-triangle:hover {
+  bottom: 18% !important;
+  left: 45% !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  border: 35px solid transparent !important;
+  border-top: none !important;
+  border-bottom: 60px solid rgba(56, 189, 248, 0.25) !important;
+  animation: spinRotate 14s linear infinite !important;
+}
+
+.shape-ring, .shape-ring:hover {
+  top: 22% !important;
+  right: 8% !important;
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 24px !important;
+  background: transparent !important;
+  border: 2px dashed rgba(38, 161, 145, 0.918) !important;
+  animation: spinRotate 10s ease-in-out infinite alternate !important;
+}
+
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-25px) scale(1.15); }
+}
+
+@keyframes spinRotate {
+  0% { transform: rotate(0deg) scale(0.95); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}
+
+.custom-contact-form .row,
+.custom-contact-form .row > div,
+.custom-contact-form .rating-group,
+.custom-contact-form .row:hover,
+.custom-contact-form .row > div:hover,
+.custom-contact-form .rating-group:hover {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.custom-contact-form .form-control {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #f8fafc !important;
+  padding: 12px 15px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+}
+
+.custom-contact-form .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+.custom-contact-form .form-control:focus {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+}
+
+.custom-contact-form .rating-group {
+  padding: 12px 16px !important;
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 10px !important;
+}
+
+.custom-contact-form .form-label {
+  color: #e2e8f0 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+}
+
+.custom-contact-form .rating-badge {
+  background-color: rgba(16, 185, 129, 0.2) !important;
+  color: #34d399 !important;
+  padding: 2px 10px !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+}
+
+.custom-contact-form .custom-slider {
+  accent-color: #10b981 !important;
+  cursor: pointer !important;
+}
+
+.custom-contact-form button[type="submit"] {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 36px !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  transition: background-color 0.25s ease, opacity 0.25s ease !important;
+}
+
+.custom-contact-form button[type="submit"]:hover:not(:disabled) {
+  background-color: #059669 !important;
+}
+
+.custom-contact-form button[type="submit"]:disabled {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  cursor: not-allowed !important;
 }
