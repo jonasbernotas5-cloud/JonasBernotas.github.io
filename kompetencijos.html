@@ -41,11 +41,6 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Pradžia</a></li>
@@ -78,7 +73,7 @@
         <p>Vartotojo kompetencijų pažangos modulis</p>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container-fluid px-lg-5" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-12">
 
@@ -149,35 +144,7 @@
                   <i class="bi bi-calendar-event"></i>
                   <h3>Planuojama</h3>
                 </div>
-
-                <div class="kanban-cards">
-
-                  <div class="skill-card">
-                    <div class="skill-icon">
-                      <i class="bi bi-cpu"></i>
-                    </div>
-                    <div class="skill-info">
-                      <h4>FPGA ir VHDL programavimas</h4>
-                      <div class="skill-meta">
-                        <span class="badge-status">Būsena: Planuojama</span>
-                        <span class="badge-xp">XP: 60</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-card">
-                    <div class="skill-icon">
-                      <i class="bi bi-broadcast"></i>
-                    </div>
-                    <div class="skill-info">
-                      <h4>RF grandinių projektavimas</h4>
-                      <div class="skill-meta">
-                        <span class="badge-status">Būsena: Planuojama</span>
-                        <span class="badge-xp">XP: 50</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="kanban-cards" id="cards-planned"></div>
               </div>
 
               <div class="kanban-column status-learning">
@@ -185,48 +152,7 @@
                   <i class="bi bi-book"></i>
                   <h3>Mokomasi</h3>
                 </div>
-
-                <div class="kanban-cards">
-                  
-                  <div class="skill-card">
-                    <div class="skill-icon">
-                      <i class="bi bi-motherboard"></i>
-                    </div>
-                    <div class="skill-info">
-                      <h4>STM32 mikrovaldikliai (C/C++)</h4>
-                      <div class="skill-meta">
-                        <span class="badge-status">Būsena: Mokomasi</span>
-                        <span class="badge-xp">XP: 50</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-card">
-                    <div class="skill-icon">
-                      <i class="bi bi-code-slash"></i>
-                    </div>
-                    <div class="skill-info">
-                      <h4>HTML, CSS ir JavaScript</h4>
-                      <div class="skill-meta">
-                        <span class="badge-status">Būsena: Mokomasi</span>
-                        <span class="badge-xp">XP: 40</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-card">
-                    <div class="skill-icon">
-                      <i class="bi bi-graph-up"></i>
-                    </div>
-                    <div class="skill-info">
-                      <h4>MATLAB signalų apdorojimas</h4>
-                      <div class="skill-meta">
-                        <span class="badge-status">Būsena: Mokomasi</span>
-                        <span class="badge-xp">XP: 40</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="kanban-cards" id="cards-learning"></div>
               </div>
 
               <div class="kanban-column status-done">
@@ -234,36 +160,7 @@
                   <i class="bi bi-check-circle"></i>
                   <h3>Atlikta</h3>
                 </div>
-
-                <div class="kanban-cards">
-                  <!-- Įgūdis 6 (60 XP) -->
-                  <div class="skill-card">
-                    <div class="skill-icon">
-                      <i class="bi bi-layers"></i>
-                    </div>
-                    <div class="skill-info">
-                      <h4>KiCad PCB plokščių dizainas</h4>
-                      <div class="skill-meta">
-                        <span class="badge-status">Būsena: Atlikta</span>
-                        <span class="badge-xp">XP: 60</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Įgūdis 7 (50 XP) -->
-                  <div class="skill-card">
-                    <div class="skill-icon">
-                      <i class="bi bi-tools"></i>
-                    </div>
-                    <div class="skill-info">
-                      <h4>SMD litavimas ir osciloskopija</h4>
-                      <div class="skill-meta">
-                        <span class="badge-status">Būsena: Atlikta</span>
-                        <span class="badge-xp">XP: 50</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="kanban-cards" id="cards-done"></div>
               </div>
 
             </div>
@@ -289,10 +186,6 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
@@ -319,6 +212,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

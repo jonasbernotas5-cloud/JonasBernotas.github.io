@@ -992,80 +992,142 @@ section ol ul > li::before,
   100% { transform: rotate(360deg) scale(1.1); }
 }
 
-.custom-contact-form .row,
-.custom-contact-form .row > div,
-.custom-contact-form .rating-group,
-.custom-contact-form .row:hover,
-.custom-contact-form .row > div:hover,
-.custom-contact-form .rating-group:hover {
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  transform: none !important;
-  animation: none !important;
+.contact-eval-form .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
-.custom-contact-form .form-control {
-  background-color: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  color: #f8fafc !important;
-  padding: 12px 15px !important;
-  border-radius: 8px !important;
-  font-size: 14px !important;
+.contact-eval-form .btn:not(.btn-clear) {
+  background: #10b981;
+  color: #fff;
+  border: 1px solid #10b981;
 }
 
-.custom-contact-form .form-control::placeholder {
-  color: #94a3b8 !important;
+.contact-eval-form .btn:not(.btn-clear):hover:not(:disabled) {
+  background: #059669;
+  border-color: #059669;
 }
 
-.custom-contact-form .form-control:focus {
-  border-color: #10b981 !important;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+.contact-eval-form .btn:disabled {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.35);
+  border-color: transparent;
 }
 
-.custom-contact-form .rating-group {
-  padding: 12px 16px !important;
-  background-color: rgba(255, 255, 255, 0.02) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 10px !important;
-}
-
-.custom-contact-form .form-label {
+.contact-eval-form .btn-clear {
+  background: rgba(255, 255, 255, 0.05) !important;
   color: #e2e8f0 !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.contact-eval-form .btn-clear:hover {
+  background: rgba(239, 68, 68, 0.12) !important;
+  border-color: #ef4444 !important;
+  color: #fca5a5 !important;
+}
+
+.skill-card .status-select {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.skill-card .status-select:hover,
+.skill-card .status-select:focus {
+  border-color: #10b981;
+}
+
+.skill-card .status-select option {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+.resume .resume-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  margin-bottom: 24px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid rgba(16, 185, 129, 0.35) !important;
+  display: inline-block !important;
+}
+
+.resume .resume-item {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-left: 3px solid #10b981 !important;
+  border-radius: 14px !important;
+  padding: 22px 26px !important;
+  margin-bottom: 22px !important;
+  transition: all 0.25s ease !important;
+}
+
+.resume .resume-item:hover {
+  border-color: #10b981 !important;
+  background-color: rgba(16, 185, 129, 0.05) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12) !important;
+}
+
+.resume .resume-item::before {
+  display: none !important;
+}
+
+.resume .resume-item h4 {
+  color: #f8fafc !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
   margin-bottom: 8px !important;
 }
 
-.custom-contact-form .rating-badge {
-  background-color: rgba(16, 185, 129, 0.2) !important;
+.resume .resume-item h5 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
   color: #34d399 !important;
-  padding: 2px 10px !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
   border-radius: 6px !important;
-  font-size: 14px !important;
-}
-
-.custom-contact-form .custom-slider {
-  accent-color: #10b981 !important;
-  cursor: pointer !important;
-}
-
-.custom-contact-form button[type="submit"] {
-  background-color: #10b981 !important;
-  color: #ffffff !important;
-  border: none !important;
-  padding: 12px 36px !important;
-  border-radius: 50px !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
-  transition: background-color 0.25s ease, opacity 0.25s ease !important;
+  padding: 5px 12px !important;
+  margin-bottom: 12px !important;
 }
 
-.custom-contact-form button[type="submit"]:hover:not(:disabled) {
-  background-color: #059669 !important;
+.resume .resume-item p em {
+  color: #94a3b8 !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
 }
 
-.custom-contact-form button[type="submit"]:disabled {
-  background-color: rgba(255, 255, 255, 0.12) !important;
-  color: rgba(255, 255, 255, 0.4) !important;
-  cursor: not-allowed !important;
+.resume .resume-item ul li {
+  color: #cbd5e1 !important;
+  padding-bottom: 8px !important;
+}
+
+.resume .resume-item ul li::marker {
+  color: #10b981 !important;
+}
+
+.resume .skills-card,
+.resume .resume-skills {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  border-radius: 16px !important;
+  padding: 26px !important;
+}
+
+.resume .progress-bar {
+  background: linear-gradient(90deg, #059669, #10b981, #34d399) !important;
+  border-radius: 50px !important;
 }
